@@ -1,0 +1,36 @@
+<section id="experience" class="fade-in py-20 px-6 md:px-16">
+
+  <div class="container">
+  <h2 class="text-4xl text-center mb-12">Work Experience</h2>
+
+  <div class="relative border-l-2 border-gray-700">
+
+    <div 
+      *ngFor="let exp of experiences; let i = index"
+      class="mb-10 ml-6"
+    >
+
+      <!-- DOT -->
+      <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-2"></div>
+
+      <!-- CARD -->
+      <div class="bg-white/5 p-6 rounded-xl border border-gray-800 hover:scale-105 transition">
+        <img src="assets/images/companylogo/company_logo.jpeg" class="w-8 mb-2">
+        <h3 class="text-xl font-bold">{{ exp.role }}</h3>
+        <p class="text-indigo-400">{{ exp.company }}</p>
+        <p class="text-gray-400 text-sm mb-3">{{ exp.duration }}</p>
+        <span class="text-xs bg-indigo-600 px-2 py-1 rounded">{{ exp.skills }}</span>
+
+        <ul class="list-disc ml-5 text-gray-300">
+          <li *ngFor="let point of exp.description">
+            {{ point }}
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</section>

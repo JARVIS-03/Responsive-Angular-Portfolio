@@ -1,0 +1,9 @@
+/* Timeline line animation */
+.border-l-2 {
+  animation: growLine 1s ease-in-out;
+}
+
+@keyframes growLine {
+  from { height: 0; }
+  to { height: 100%; }
+}

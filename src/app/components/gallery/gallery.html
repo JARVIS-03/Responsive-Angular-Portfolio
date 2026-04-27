@@ -1,0 +1,46 @@
+<section id="gallery" class="fade-in py-20 px-6 md:px-16">
+
+  <div class="container">
+  <h2 class="text-4xl text-center mb-12">Conferences & Events</h2>
+
+  <!-- GRID -->
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div 
+      *ngFor="let img of images"
+      (click)="openImage(img)"
+      class="relative group cursor-pointer overflow-hidden rounded-xl"
+    >
+      <img 
+        [src]="img"
+        class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+      />
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+        <span class="text-white text-lg">View</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MODAL -->
+  <div 
+    *ngIf="selectedImage"
+    class="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
+  >
+    <img 
+      [src]="selectedImage"
+      class="max-w-[90%] max-h-[80%] rounded-xl shadow-2xl"
+    />
+
+    <button 
+      (click)="closeImage()"
+      class="absolute top-6 right-6 text-white text-3xl"
+    >
+      ✖
+    </button>
+  </div>
+  </div>
+
+</section>

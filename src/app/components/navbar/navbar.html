@@ -1,0 +1,22 @@
+<nav class="fixed top-0 left-0 w-full bg-black/60 backdrop-blur-md z-50">
+
+  <div class="flex justify-between items-center px-6 md:px-16 py-4">
+
+    <h1 class="text-xl font-bold text-indigo-400">Kalai's Portfolio</h1>
+
+    <ul class="flex gap-6 text-gray-300">
+
+      <li 
+        *ngFor="let item of navItems"
+        (click)="scrollTo(item.id)"
+        [class.text-indigo-400]="activeSection === item.id"
+        class="cursor-pointer hover:text-indigo-400 transition"
+      >
+        {{ item.label }}
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>

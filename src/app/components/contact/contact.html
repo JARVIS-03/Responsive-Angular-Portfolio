@@ -1,0 +1,39 @@
+<section id="contact" class="fade-in py-20 text-center">
+  <div class="container">
+  <h2 class="text-4xl mb-6">Contact</h2>
+  <form (submit)="sendEmail($event)" class="max-w-xl mx-auto flex flex-col gap-4">
+
+  <input 
+    type="text" 
+    name="user_name"
+    placeholder="Your Name"
+    class="p-3 rounded bg-black/40 border border-gray-700"
+    required
+  />
+
+  <input 
+    type="email" 
+    name="user_email"
+    placeholder="Your Email"
+    class="p-3 rounded bg-black/40 border border-gray-700"
+    required
+  />
+
+  <textarea 
+    name="message"
+    placeholder="Your Message"
+    rows="5"
+    class="p-3 rounded bg-black/40 border border-gray-700"
+    required
+  ></textarea>
+
+  <button 
+    type="submit"
+    class="bg-indigo-600 p-3 rounded hover:bg-indigo-700 transition"
+  >
+    Send Message
+  </button>
+
+</form>
+  </div>
+</section>

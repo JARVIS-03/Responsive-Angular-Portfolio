@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth;
+}
+
+nav li {
+  position: relative;
+}
+
+nav li::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #6366f1;
+  transition: width 0.3s;
+}
+
+nav li:hover::after {
+  width: 100%;
+}

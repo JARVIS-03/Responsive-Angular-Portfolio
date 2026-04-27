@@ -1,3 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-br from-black via-gray-900 to-black text-white;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Spotlight base */
+#cursor-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: all 0.1s ease-out;
+}
+
+/* Optional: darker background effect */
+body {
+  background-color: #000;
+}
+
+a:hover ~ #cursor-spotlight,
+button:hover ~ #cursor-spotlight {
+  width: 400px;
+  height: 400px;
+}
+
+/* Container */
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+}
+
+/* Each section */
+.scroll-container section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+}
+
+/* Only wrapper controls snapping */
+.snap-section {
+  height: 100vh;
+  padding-top: 80px;
+  scroll-snap-align: start;
+  display: flex;
+}
+
+/* Let components center themselves */
+.snap-section > * {
+  width: 100%;
+}
+
+section {
+  padding-top: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
