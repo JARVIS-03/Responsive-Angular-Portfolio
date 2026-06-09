@@ -13,10 +13,11 @@ import { Resume } from "./components/resume/resume";
 import { Gallery } from "./components/gallery/gallery";
 import { Experience } from "./components/experience/experience";
 import { Footer } from "./components/footer/footer";
+import { Chatbot } from "./components/chatbot/chatbot";
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, About, Projects, Contact, Skills, Linkedin, Certifications, Resume, Gallery, Experience, Footer],
+  imports: [Navbar, Hero, About, Projects, Contact, Skills, Linkedin, Certifications, Resume, Gallery, Experience, Footer, Chatbot],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

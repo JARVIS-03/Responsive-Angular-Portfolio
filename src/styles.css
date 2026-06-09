@@ -49,24 +49,22 @@ button:hover ~ #cursor-spotlight {
 /* Container */
 .scroll-container {
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y proximity;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
 }
 
 /* Each section */
 .scroll-container section {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
-  display: flex;
-  align-items: center;
+  scroll-snap-stop: always;
 }
 
 /* Only wrapper controls snapping */
 .snap-section {
-  height: 100vh;
-  padding-top: 80px;
+  min-height: 100vh;
   scroll-snap-align: start;
-  display: flex;
+  scroll-snap-stop: always;
 }
 
 /* Let components center themselves */
