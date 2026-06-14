@@ -1,0 +1,55 @@
+{
+  "name": "Kalaiyarasan",
+  "role": "Java Full Stack Developer",
+  "summary": "Specializing in Angular, Spring Boot, AWS, Docker, Terraform and Microservices.",
+
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "Microservices",
+    "Kafka",
+    "Angular",
+    "AWS",
+    "Docker",
+    "Terraform",
+    "PostgreSQL",
+    "Git",
+    "CI/CD"
+  ],
+
+  "projects": [
+    {
+      "name": "E-Com Application",
+      "description": "E-Commerce Multi Services Application with Java & Spring Boot."
+    },
+    {
+      "name": "Autonomous Cloud Infrastructure",
+      "description": "Production-Grade AWS Infrastructure using Terraform."
+    },
+    {
+      "name": "Automobile Management System",
+      "description": "Web application for managing automobile inventory and sales."
+    }
+  ],
+
+  "certifications": [
+    "AWS Certified AI Practitioner",
+    "HashiCorp Certified: Terraform Associate (003)",
+    "Associate Cloud Engineer Certification",
+    "Oracle Certified Associate, Java SE 8 Programmer"
+  ],
+
+  "workexperience": [
+    {
+      "company": "Virtusa",
+      "position": "Associate Engineer",
+      "duration": "17th May 2022 - 14th July 2026",
+      "description": "Worked on the eCoupon platform or J.P. Morgan Chase client, contributing to the development and enhancement of Java-based microservices supporting digital offers and promotions."
+    }
+  ],
+
+  "contact": {
+    "linkedin": "https://www.linkedin.com/in/kalaiyarasan-s/",
+    "github": "https://github.com/JARVIS-03"
+  }
+}

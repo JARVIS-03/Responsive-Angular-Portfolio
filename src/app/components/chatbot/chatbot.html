@@ -34,7 +34,22 @@
 
     </div>
 
+    <div *ngIf="isTyping" class="typing">
+      Portfolio Assistant is typing...
+    </div>
+
   </div>
+
+  <div class="suggestions">
+
+  <button
+    *ngFor="let suggestion of suggestions"
+    (click)="userInput = suggestion; sendMessage()"
+  >
+    {{ suggestion }}
+  </button>
+
+</div>
 
   <div class="chat-footer">
 
